@@ -26,7 +26,7 @@ Executar os comandos:
 
 ## Stack utilizada
 
-**Front-end:** Vue, PrimeVue, Inertia, TailwindCSS
+**Front-end:** Vue, PrimeVue, Inertia, Axios, TailwindCSS
 
 **Back-end:** Laravel, Php, Inertia
 
