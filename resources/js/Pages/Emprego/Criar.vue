@@ -34,8 +34,8 @@ function submit() {
         <div class="border-b border-gray-900/10 pb-12 my-6">
           <h2 class="text-base font-semibold leading-7 text-gray-900 text-xl/[27px]">Adicionar emprego</h2>
             <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-              <div class="sm:col-span-3">
-                <label for="titulo" class="block text-sm font-medium leading-6 text-gray-900">Nome</label>
+              <div class="sm:col-span-6">
+                <label for="titulo" class="block text-sm font-medium leading-6 text-gray-900">Título</label>
                 <div class="mt-2">
                     <InputText type="text" id="titulo" name="titulo" v-model="form.titulo" class="w-full"/>
                 </div>
@@ -47,8 +47,8 @@ function submit() {
                 </div>
                 </div>
 
-                <div class="sm:col-span-3">
-                <label for="link" class="block text-sm font-medium leading-6 text-gray-900">Último nome</label>
+                <div class="sm:col-span-6">
+                <label for="link" class="block text-sm font-medium leading-6 text-gray-900">Link</label>
                 <div class="mt-2">
                     <InputText type="text" id="link" name="link" v-model="form.link" class="w-full"/>
                 </div>
@@ -60,7 +60,7 @@ function submit() {
                 </div>
 
                 <div class="col-span-full">
-                <label for="address" class="block text-sm font-medium leading-6 text-gray-900">Endereço</label>
+                <label for="address" class="block text-sm font-medium leading-6 text-gray-900">Descrição</label>
                 
                 <div class="mt-2">
                     <Textarea name="description" id="description" v-model="form.descricao" rows="5" cols="30"  class="w-full"/>
