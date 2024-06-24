@@ -12,6 +12,7 @@ Executar os comandos:
 ```bash
   npm i 
   composer install
+  php artisan migrate
 ```
     
 ## Funcionalidades
