@@ -73,9 +73,9 @@ function submit() {
     <FlashMessages></FlashMessages>
     <div class="bg-gray-50 flex justify-center items-center">
         <form  @submit.prevent="submit" class="p-20">
-            <div class="space-y-12">
+            <div class="space-y-12 bg-white shadow-sm shadow-gray-500/50 p-10">
                 <div class="border-b border-gray-900/10 pb-12 my-6">
-                <h2 class="text-base font-semibold leading-7 text-gray-900 text-4xl">Informações pessoais</h2>
+                <h2 class="text-base font-semibold leading-7 text-gray-900 text-xl/[27px]">Informações pessoais</h2>
                 <div class="mt-20 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                     <div class="sm:col-span-3">
                     <label for="firstname" class="block text-sm font-medium leading-6 text-gray-900">Primeiro nome</label>
@@ -240,8 +240,8 @@ function submit() {
                 </div>
                 </div>
 
-    <div class="border-b border-gray-900/10 pb-12">
-      <h2 class="text-base font-semibold leading-7 text-gray-900 text-4xl">Informações complementares</h2>
+    <div class="pb-12">
+      <h2 class="text-base font-semibold leading-7 text-gray-900 text-xl/[27px]">Informações complementares</h2>
       <div class="mt-10 space-y-10">
         <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
 
@@ -313,11 +313,10 @@ function submit() {
       </div>
       </div>
     </div>
-  </div>
-
-  <div class="mt-6 my-6 flex items-center justify-end gap-x-6">
-    <button type="button" class="text-sm font-semibold leading-6 text-gray-900" v-on:click="form.reset()">Cancelar</button>
-    <button type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Salvar</button>
+    <div class="mt-6 my-6 flex items-center justify-end gap-x-6">
+      <button type="button" class="text-sm font-semibold leading-6 text-gray-900" v-on:click="form.reset()">Cancelar</button>
+      <button type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Salvar</button>
+    </div>
   </div>
 </form>
    </div>

@@ -75,7 +75,7 @@ const showingNavigationDropdown = ref(false);
 
                                 <template #content>
                                     <DropdownLink :href="route('curso.criar')">Cadastrar</DropdownLink>
-                                    <DropdownLink :href="route('curso.listar')">Listar</DropdownLink>
+                                    <DropdownLink :href="route('curso.index')">Listar</DropdownLink>
                                 </template>
                             </Dropdown>
                         </div>

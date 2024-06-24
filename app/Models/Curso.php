@@ -11,5 +11,4 @@ class Curso extends Model
 
     protected $table = 'Curso';
     protected $fillable = ['titulo', 'descricao', 'link'];
-
 }

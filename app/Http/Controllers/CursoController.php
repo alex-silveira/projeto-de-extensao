@@ -5,15 +5,24 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
-
+use App\Models\Curso;
+use Inertia\Inertia;
 class CursoController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
+
     public function index()
     {
-        //
+        $user = auth()->user();
+        
+        $courses = $user->course()->paginate(10);
+
+
+        return Inertia::render('Curso/Listar', [
+            'courses'=>  compact('courses'),
+        ]); 
     }
 
     /**

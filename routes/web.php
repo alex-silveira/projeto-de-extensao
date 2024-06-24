@@ -32,9 +32,6 @@ Route::get('/curso/criar', function () {
     return Inertia::render('Curso/Criar');
 })->middleware(['auth', 'verified'])->name('curso.criar');
 
-Route::get('/curso/listar', function () {
-    return Inertia::render('Curso/Listar');
-})->middleware(['auth', 'verified'])->name('curso.listar');
 
 Route::get('/emprego/criar', function () {
     return Inertia::render('Emprego/Criar');
@@ -49,6 +46,7 @@ Route::get('/emprego/listar', function () {
 Route::middleware('auth')->group(function () {
     Route::post('/desemprego/criar',  [DesempregoController::class, 'store'])->name('desemprego.store');
     Route::post('/emprego/criar',  [EmpregoController::class, 'store'])->name('emprego.store');
+    Route::get('/curso/listar',  [CursoController::class, 'index'])->name('curso.index');
     Route::post('/curso/criar',  [CursoController::class, 'store'])->name('curso.store');
 
     Route::get('/dashboard',  [DashBoardController::class, 'index'])->name('dashboard');
