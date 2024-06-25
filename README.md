@@ -1,7 +1,7 @@
 
 # Projeto de extensão - Banco de dados
 
-Até o momento projeto faz o cadastro de desemprego e cursos e mostra o índice de desemprego por idade no gráfico.
+Até o momento o projeto faz o cadastro de desemprego e cursos e mostra o índice de desemprego por idade no gráfico.
 
 ## Instalação
 
