@@ -57,7 +57,7 @@ GET /desemprego/criar
 POST /curso/criar 
 ```
 
-#### Retonar a lista de cursos com paginação
+#### Retorna a lista de cursos com paginação
 
 ```http
 GET /curso/criar 
