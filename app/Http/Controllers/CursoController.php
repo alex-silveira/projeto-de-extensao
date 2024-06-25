@@ -17,7 +17,7 @@ class CursoController extends Controller
     {
         $user = auth()->user();
         
-        $courses = $user->course()->paginate(10);
+        $courses = $user->course()->get();
 
 
         return Inertia::render('Curso/Listar', [

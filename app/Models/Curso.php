@@ -11,4 +11,7 @@ class Curso extends Model
 
     protected $table = 'Curso';
     protected $fillable = ['titulo', 'descricao', 'link'];
+    protected $casts = [
+        'created_at' => 'datetime:d/m/Y',
+    ];
 }
