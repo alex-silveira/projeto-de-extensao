@@ -1,9 +1,8 @@
 <script setup>
 import MenuPrincipal from '@/Components/MenuPrincipal.vue';
 import Footer from '@/Components/Footer.vue';
-import Badge from 'primevue/Badge';
+import Badge from 'primevue/badge';
 import DataView from 'primevue/dataview';
-import { Link } from '@inertiajs/vue3'
 const products = ref();
 
 import { ref } from "vue";
