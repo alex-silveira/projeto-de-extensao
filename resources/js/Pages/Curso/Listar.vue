@@ -3,9 +3,6 @@ import MenuPrincipal from '@/Components/MenuPrincipal.vue';
 import Footer from '@/Components/Footer.vue';
 import Badge from 'primevue/badge';
 import DataView from 'primevue/dataview';
-const products = ref();
-
-import { ref } from "vue";
 
 const props = defineProps({ courses: Object })
 
