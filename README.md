@@ -48,7 +48,7 @@ POST /desemprego/criar
 #### Retorna os dados de desemprego por idade
 
 ```http
-GET /desemprego/criar 
+GET /dashboard
 ```
 
 #### Cadastro de curso
@@ -57,7 +57,7 @@ GET /desemprego/criar
 POST /curso/criar 
 ```
 
-#### Retorna a lista de cursos com paginação
+#### Retorna a lista de cursos
 
 ```http
 GET /curso/criar 
