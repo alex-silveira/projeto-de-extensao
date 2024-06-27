@@ -23,6 +23,7 @@ Executar os comandos:
 - Cadastro de desemprego
 - Gráficos de desemprego por idade
 - Cadastro de cursos
+- Lista de cursos
 
 
 ## Stack utilizada
