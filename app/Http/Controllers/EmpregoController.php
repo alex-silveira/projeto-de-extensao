@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Inertia\Inertia;
 
 class EmpregoController extends Controller
 {
@@ -13,7 +14,14 @@ class EmpregoController extends Controller
      */
     public function index()
     {
-        //
+        $user = auth()->user();
+        
+        $vagas = $user->emprego()->get();
+
+
+        return Inertia::render('Emprego/Listar', [
+            'vagas'=>  compact('vagas'),
+        ]); 
     }
 
     /**
@@ -29,7 +37,14 @@ class EmpregoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $user = auth()->user();
+
+        $store = $user->emprego()->create($data);
+
+        return Redirect::route('emprego.criar')->with('success', 'Emprego cadastrado com sucesso!');
+
     }
 
     /**

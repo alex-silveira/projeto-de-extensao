@@ -11,13 +11,13 @@ import Textarea from 'primevue/textarea';
 defineProps({errors: Object})
 
 const form = useForm({
-  coursename: 'Banco de dados',
-  courselink: 'www.google.com',
-  coursedescription: 'Curso de banco de dados MYSQL',
+  titulo: null,
+  descricao: null,
+  link: null,
 })
 
 function submit() {
-  router.post('/curso/store', form)
+  router.post('/emprego/criar', form)
 } 
   
 </script>

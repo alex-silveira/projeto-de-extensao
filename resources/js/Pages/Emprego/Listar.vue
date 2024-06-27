@@ -1,62 +1,49 @@
 <script setup>
 import MenuPrincipal from '@/Components/MenuPrincipal.vue';
 import Footer from '@/Components/Footer.vue';
+import Card from 'primevue/card';
+import Button from 'primevue/button';
+import Badge from 'primevue/badge';
+
+const props = defineProps({ vagas: Object })
+
 </script>
 
 <template>
 
 <MenuPrincipal></MenuPrincipal>
+<div class="mt-20 grid grid-cols-3 mx-10 my-10 gap-x-10 gap-y-20" v-for="vagas in $page.props.vagas">
+<Card style=" overflow: hidden" v-for="item in vagas">
 
-<div class="bg-gray-50">
-    <div class="flex flex-wrap justify-center py-10">
-        
-    <div class="p-4 max-w-sm block rounded-lg bg-white text-center text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white">
-
-    <div class="p-6">
-        <h5 class="mb-2 text-xl font-medium leading-tight ">
-        Estagiário nível médio
-        </h5>
-        <p class="mb-4 text-base my-6">
-            Área e especialização profissional: Comércio Exterior, Importação, Exportação - Relações Internacionais
+    <template #title>
+        <div class="flex">
+            <div class="w-60">
+                {{item.titulo}}
+            </div>
+            <div class="w-full text-right text-sm">
+                <Badge >{{ item.created_at }}</Badge>
+            </div>
+        </div>
+    </template>
+    <template #content>
+        <p class="m-0 h-72">
+           {{item.descricao}}
         </p>
-        <button
-        type="button"
-        class="inline-block rounded bg-sky-500 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
-        data-twe-ripple-init
-        data-twe-ripple-color="light">
-        Candidatar-se
-        </button>
-    </div>
-    <div
-        class="border-t-2 border-neutral-100 px-6 py-3 text-surface/75 dark:border-white/10 dark:text-neutral-300">
-        13 de agosto de 2024
-    </div>
-    </div>
-
-    <div class="p-4 mx-5 max-w-sm block rounded-lg bg-white text-center text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white">
-    <div class="p-6">
-        <h5 class="mb-2 text-xl font-medium leading-tight ">
-        Estagiário nível médio
-        </h5>
-        <p class="mb-4 text-base my-6">
-            Área e especialização profissional: Comércio Exterior, Importação, Exportação - Relações Internacionais
-        </p>
-        <button
-        type="button"
-        class="inline-block rounded bg-sky-500 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
-        data-twe-ripple-init
-        data-twe-ripple-color="light">
-        Candidatar-se
-        </button>
-    </div>
-    <div
-        class="border-t-2 border-neutral-100 px-6 py-3 text-surface/75 dark:border-white/10 dark:text-neutral-300">
-        13 de agosto de 2024
-    </div>
-    </div>
-    </div>
+    </template>
+    <template #footer >
+        <div class="flex gap-4 justify-center static ">
+            <a href="http://google.com" target="__blank">
+                <Button label="Candidatar-se" c />
+            </a>
+        </div>
+    </template>
+</Card>
 </div>
 
 <Footer></Footer>
 
 </template>
+
+<style scoped>
+
+</style>
