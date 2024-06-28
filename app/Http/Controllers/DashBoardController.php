@@ -48,7 +48,7 @@ class DashBoardController extends Controller
 
         if($entries->count() > 0 ){
             foreach($entries as $entry){
-            $dataset['idade'][] = $entry->idade;
+            $dataset['idade'][] = $entry->idade . " Anos";
             $dataset['count'][] = $entry->count;
             }
 
@@ -57,11 +57,14 @@ class DashBoardController extends Controller
                 '22 Anos', '23 Anos', '24 Anos', '25 Anos', '26 Anos', '27 Anos', '28 Anos', '29 Anos'
             ];   
 
+
+
             return Inertia::render('Dashboard', [
-                'labels'=> array_values($labels),
+                'labels'=> array_values($dataset['idade']),
                 'dataset'=>  array_values($dataset['count']),
             ]); 
         }
+        
 
         return Inertia::render('Dashboard'); 
     }
